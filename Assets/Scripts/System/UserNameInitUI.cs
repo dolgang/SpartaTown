@@ -14,12 +14,13 @@ public class UserNameInitUI : MonoBehaviour
 
     private void Awake()
     {
-        _inputText = _userNameInput.GetComponent<TMP_InputField>().text;
+        Time.timeScale = 0.0f;
     }
 
     void Update()
     {
-        Time.timeScale = 0.0f;
+        _inputText = _userNameInput.GetComponent<TMP_InputField>().text;
+        
     }
 
     public void InputCheck()
@@ -38,6 +39,7 @@ public class UserNameInitUI : MonoBehaviour
     {
         _userName.text = _inputText;
 
+        Time.timeScale = 1.0f;
         gameObject.SetActive(false);
     }
 }
