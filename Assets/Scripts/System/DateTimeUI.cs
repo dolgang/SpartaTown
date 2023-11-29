@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DateTimeUI : MonoBehaviour
 {
-    public TMP_Text DateTimeTxt;
+    public TMP_Text _dateTimeTxt;
 
     private string DateTimeUpdate()
     {
@@ -16,6 +16,6 @@ public class DateTimeUI : MonoBehaviour
 
     private void Update()
     {
-        DateTimeTxt.text = DateTimeUpdate();
+        _dateTimeTxt.text = DateTimeUpdate();
     }
 }
