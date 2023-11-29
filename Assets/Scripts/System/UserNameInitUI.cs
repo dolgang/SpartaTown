@@ -10,6 +10,7 @@ public class UserNameInitUI : MonoBehaviour
 
     public TMP_InputField _userNameInput;
     public GameObject _errorMassege;
+    public GameObject _characterSelect;
     private string _inputText;
 
     private void Awake()
@@ -41,5 +42,6 @@ public class UserNameInitUI : MonoBehaviour
 
         Time.timeScale = 1.0f;
         gameObject.SetActive(false);
+        _characterSelect.SetActive(false);
     }
 }
