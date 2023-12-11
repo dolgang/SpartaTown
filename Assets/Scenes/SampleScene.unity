@@ -1037,11 +1037,11 @@ GameObject:
   - component: {fileID: 188133134}
   - component: {fileID: 188133133}
   - component: {fileID: 188133135}
-  - component: {fileID: 188133136}
   - component: {fileID: 188133137}
-  - component: {fileID: 188133138}
   - component: {fileID: 188133140}
   - component: {fileID: 188133139}
+  - component: {fileID: 188133141}
+  - component: {fileID: 188133142}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1130,7 +1130,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1.75}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1207,27 +1207,6 @@ MonoBehaviour:
   armRenderer: {fileID: 1166295040}
   armPivot: {fileID: 1443720701}
   characterRenderer: {fileID: 1055159755}
---- !u!95 &188133136
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188133128}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e25985ce46b1af0458e4c1fea502e006, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &188133137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1269,29 +1248,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &188133138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188133128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c40de10227106d2428f41713f7a40400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &188133139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,6 +1290,39 @@ MonoBehaviour:
     speed: 5
     attackSO: {fileID: 11400000, guid: 3aef39e2c678c04439549fa46c80ec30, type: 2}
   statsModifiers: []
+--- !u!95 &188133141
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188133128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abaec8f48cfcace45b4ad5d5f4f193a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &188133142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188133128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3b3d2206b6f23408b57dc57017ae0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &207145869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,7 +4730,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: bbcb4638c11add94a94c6aff5d81ce42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5511,7 +5511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 0}
-  testObject: {fileID: 3158292627569579100, guid: 79466544a95818f47a4a60aa83e2cd26, type: 3}
 --- !u!114 &1873216030
 MonoBehaviour:
   m_ObjectHideFlags: 0
