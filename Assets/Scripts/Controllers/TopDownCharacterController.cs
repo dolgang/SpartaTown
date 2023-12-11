@@ -1,13 +1,50 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class TopDownCharacterController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
-    public event Action<Vector2> OnShotEvent;
+    public event Action<AttackSO> OnAttackEvent;
+
+    private float _timeSinceLastAttack = float.MaxValue;
+
+    protected CharacterStatsHandler Stats {  get; private set; }
+
+    protected virtual void Awake()
+    {
+        Stats = GetComponent<CharacterStatsHandler>();
+    }
+
+    protected bool IsAttacking { get; set; }
+
+    protected virtual void Update()
+    {
+        HandleAttackDelay();
+    }
+
+    private void HandleAttackDelay()
+    {
+        if (Stats.CurrentStates.attackSO == null)
+        {
+            return;
+        }
+
+
+        if(_timeSinceLastAttack <= Stats.CurrentStates.attackSO.delay)
+        {
+            _timeSinceLastAttack += Time.deltaTime;
+        }
+
+        if(IsAttacking && _timeSinceLastAttack > Stats.CurrentStates.attackSO.delay)
+        {
+            _timeSinceLastAttack = 0;
+            CallAttackEvent(Stats.CurrentStates.attackSO);
+        }
+    }
 
     public void CallMoveEvent(Vector2 direction)
     {
@@ -19,8 +56,8 @@ public class TopDownCharacterController : MonoBehaviour
         OnLookEvent?.Invoke(direction);
     }
 
-    public void CallShotEvent(Vector2 direction)
+    public void CallAttackEvent(AttackSO attackSO)
     {
-        OnShotEvent?.Invoke(direction);
+        OnAttackEvent?.Invoke(attackSO);
     }
 }
