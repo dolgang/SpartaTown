@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 795557260269284076}
   - component: {fileID: 4028501238740581878}
   - component: {fileID: 2398171521082700578}
+  - component: {fileID: 7565795069656902265}
   m_Layer: 6
   m_Name: Orc_Shaman
   m_TagString: Untagged
@@ -261,7 +262,7 @@ Transform:
   - {fileID: 2113408980155233766}
   - {fileID: 2451481478070330828}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1548855960121744421
 BoxCollider2D:
@@ -432,6 +433,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &7565795069656902265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796727788734310265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d93404e54f4e84f86da13e35e45da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9163977155646211139
 GameObject:
   m_ObjectHideFlags: 0

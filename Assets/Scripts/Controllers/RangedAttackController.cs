@@ -60,7 +60,7 @@ public class RangedAttackController : MonoBehaviour
                     TopDownMovement movement = collision.GetComponent<TopDownMovement>();
                     if(movement != null)
                     {
-                        movement.ApplyKnockback(transform, _attackData.knockbackPower, _attackData.knockbackPower);
+                        movement.ApplyKnockback(transform, _attackData.knockbackPower, _attackData.knockbackTime);
                     }
                 }
             }
