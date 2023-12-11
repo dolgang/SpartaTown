@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4080761709698531354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2113408980155233766}
   - component: {fileID: 2851348029457295276}
   - component: {fileID: 3879306571667816013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5106575649173757583}
   - component: {fileID: 7360552543856146457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,8 @@ GameObject:
   - component: {fileID: 1962791859070072166}
   - component: {fileID: 795557260269284076}
   - component: {fileID: 4028501238740581878}
-  m_Layer: 0
+  - component: {fileID: 2398171521082700578}
+  m_Layer: 6
   m_Name: Orc_Shaman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +261,7 @@ Transform:
   - {fileID: 2113408980155233766}
   - {fileID: 2451481478070330828}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1548855960121744421
 BoxCollider2D:
@@ -418,6 +419,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd49ed587e20294b8741da35983dbea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2398171521082700578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796727788734310265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6144a185e6103c24896a3dfe4fe16820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
 --- !u!1 &9163977155646211139
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2451481478070330828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

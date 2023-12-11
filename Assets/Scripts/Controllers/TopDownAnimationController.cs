@@ -9,9 +9,12 @@ public class TopDownAnimationController : TopDownAnimations
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int IsHit = Animator.StringToHash("IsHit");
 
+    private HealthSystem _healthSystem;
+
     protected override void Awake()
     {
         base.Awake();
+        _healthSystem = GetComponent<HealthSystem>();
     }
 
     private void Start()
@@ -19,6 +22,12 @@ public class TopDownAnimationController : TopDownAnimations
         {
             controller.OnAttackEvent += Attacking;
             controller.OnMoveEvent += Move;
+        }
+
+        if( _healthSystem != null )
+        {
+            _healthSystem.OnDamage += Hit;
+            _healthSystem.OnInvincibilityEnd += InvinciblilityEnd;
         }
     }
 

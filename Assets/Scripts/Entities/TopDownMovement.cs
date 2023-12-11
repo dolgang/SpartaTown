@@ -11,6 +11,9 @@ public class TopDownMovement : MonoBehaviour
     private Vector2 _movementDirectrion = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
+    private Vector2 _knockback = Vector2.zero;
+    private float knockbackDuration = 0.0f;
+
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
@@ -26,6 +29,16 @@ public class TopDownMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement(_movementDirectrion);
+        if(knockbackDuration > 0.0f)
+        {
+            knockbackDuration -= Time.fixedDeltaTime;
+        }
+    }
+
+    public void ApplyKnockback(Transform other, float power, float duration)
+    {
+        knockbackDuration = duration;
+        _knockback = -(other.position - transform.position).normalized * power;
     }
 
     private void Move(Vector2 direction)
@@ -35,8 +48,11 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * _stats.CurrentStates.speed;
-
+        direction = direction * _stats.CurrentStats.speed;
+        if(knockbackDuration > 0.0f)
+        {
+            direction += _knockback;
+        }
         _rigidbody.velocity = direction;
     }
 }
