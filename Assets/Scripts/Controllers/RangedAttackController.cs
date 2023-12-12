@@ -78,7 +78,7 @@ public class RangedAttackController : MonoBehaviour
         UpdateProjectileSprite();
         _trailRenderer.Clear();
         _currentDuration = 0;
-        _spriteRenderer.color = attackData.projectilesColor;
+        _spriteRenderer.color = attackData.projectileColor;
 
         transform.right = _direction;
 

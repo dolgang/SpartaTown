@@ -11142,7 +11142,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1194236366}
   m_HandleRect: {fileID: 0}
@@ -16807,6 +16807,10 @@ MonoBehaviour:
   - {fileID: 7979934712782679735, guid: 63fe8f173d83d2c499b7ead9714afcc5, type: 3}
   - {fileID: 7796727788734310265, guid: c427b9301d8961f4c8cd79518b7e888b, type: 3}
   spawnPositionsRoot: {fileID: 1147206352}
+  rewards:
+  - {fileID: 1831560322587710169, guid: 43ca9a55cb4a00d4faae82593b1eb9ab, type: 3}
+  - {fileID: 3564505355702798378, guid: c3ee0c48998175a499ccd16bd08e8c3f, type: 3}
+  - {fileID: 7357524248051398873, guid: 4951e52b34db7d245b02ab1c6fc2dff0, type: 3}
 --- !u!4 &1816403141
 Transform:
   m_ObjectHideFlags: 0
