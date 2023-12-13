@@ -16811,6 +16811,16 @@ MonoBehaviour:
   - {fileID: 1831560322587710169, guid: 43ca9a55cb4a00d4faae82593b1eb9ab, type: 3}
   - {fileID: 3564505355702798378, guid: c3ee0c48998175a499ccd16bd08e8c3f, type: 3}
   - {fileID: 7357524248051398873, guid: 4951e52b34db7d245b02ab1c6fc2dff0, type: 3}
+  defaultStats:
+    statsChangeType: 0
+    maxHealth: 0
+    speed: 0
+    attackSO: {fileID: 11400000, guid: ee600739a7233634abefd095e4494eef, type: 2}
+  rangedStats:
+    statsChangeType: 0
+    maxHealth: 0
+    speed: 0
+    attackSO: {fileID: 11400000, guid: 71b2c8a6d2781274daf6277ead1416c0, type: 2}
 --- !u!4 &1816403141
 Transform:
   m_ObjectHideFlags: 0
@@ -16890,7 +16900,7 @@ MonoBehaviour:
   pools:
   - tag: Arrow
     prefab: {fileID: 3158292627569579100, guid: 79466544a95818f47a4a60aa83e2cd26, type: 3}
-    size: 20
+    size: 50
 --- !u!1 &1963463447
 GameObject:
   m_ObjectHideFlags: 0
